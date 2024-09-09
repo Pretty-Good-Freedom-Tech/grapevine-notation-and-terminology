@@ -1,6 +1,8 @@
 # grapevine-notation-and-terminology
 suggested notation and terminology for the grapevine. Precursor to formalization with typscript.
 
+# Datasets
+
 ## datasets: GrapeRankRatings, GrapeRankRatings, GrapeRankScorecards
 
 These datasets may take the form of sql tables or objects
@@ -43,10 +45,24 @@ A list of parameters
 
 (more?)
 
+# Functions
+
 ## function: TheReallyImportantGrapeRankFunction
 
 This is one of the cornerstone functions of the grapevine
 
 - inputs: G_in, R, P
 - output: G_out
+
+## function: calculate weighted average
+
+## function: calculate input
+
+## function: calculate confidence
+
+## function: calculate influence
+
+influence = average * confidence
+
+
 

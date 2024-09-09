@@ -54,13 +54,33 @@ This is one of the cornerstone functions of the grapevine
 - inputs: G_in, R, P
 - output: G_out
 
+Step 1: Iterate through every rating in R and establish an array aRatees of all ratees ~~(and all contexts if the optional context col is provided)~~
+
+Step 2: initialize G_out with one row for each item in aRatee
+
+Step 2: Iterate through each ratee in aRatees, calculate: average, input, confidence, influence, and update G_out accordingly
+
+Step 3: return G_out
+
 ## function: calculate weighted average
 
 ## function: calculate input
 
 ## function: calculate confidence
 
+- inputs: rigor, input
+- output: confidence, a number between 0 and 1
+
+alpha = (a function of rigor)
+
+(probably it will make more sense to calculate alpha only once and pass alpha into this function rather than pass in rigor and do the same calculation of alpha over and over)
+
+confidence = (1 - e^(- alpha * input) )
+
 ## function: calculate influence
+
+- inputs: average, confidence
+- output: influence
 
 influence = average * confidence
 

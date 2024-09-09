@@ -45,8 +45,8 @@ a table or array of S but where there is no need for observer or ratingType colu
 
 A list of parameters 
 
-- rigor:
-- attenutation factor: a number between 0 and 1
+- rigor: a number
+- attenuation factor: a number between 0 and 1
 - default average: should be zero but in theory doesn't have to be
 - default confidence
 

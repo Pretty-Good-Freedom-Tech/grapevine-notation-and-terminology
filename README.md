@@ -6,7 +6,7 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 ## variables: 
 - R: GrapeRankRatings
 - S: GrapeRankScorecard
-- G: GrapeRankScorecards
+- G: GrapeRankScorecards, an array of S
 - P: GrapeRankParameters
 
 ## variable: GrapeRankRatings (R)

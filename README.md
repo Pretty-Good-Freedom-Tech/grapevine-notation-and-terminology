@@ -45,15 +45,17 @@ a table or array of S but where there is no need for observer or ratingType colu
 
 A list of parameters 
 
+- seed user
 - rigor: a number
-- attenuation factor: a number between 0 and 1
-- default average: should be zero but in theory doesn't have to be
-- default confidence
+- attenuation factor: a number between 0 and 1. This is a factor in the weight
+- default rater influence: should be zero but in theory doesn't have to be
+- default ratee average: should be zero but in theory doesn't have to be
+- default ratee confidence: a number between 0 and 1
 - ratingType
 - min
 - max
 
-(more?)
+default ratee average and confidence define a single, additional rating that is automatically applied to every ratee, where the author is the seed user. Setting default ratee confidence = 0 is the same effect as completely omitting this rating. 
 
 # Functions
 
@@ -74,12 +76,19 @@ Step 3: return G_out
 
 ## function: calculate weighted average
 
+## function: calculate weight
+
+This is the weight of an individual rating r. It is called once for each r by the *calculate weighted average* function. 
+
+- inputs: r, rater influence, attenuation factor, seed user
+- output: weight, a number between 0 and 1
+
 ## function: calculate input
 
 ## function: calculate confidence
 
 - inputs: rigor, input
-- output: confidence, a number between 0 and 1
+- output: confidence, a number between 0 and 1 (might be exceptions to this??)
 
 alpha = (a function of rigor)
 

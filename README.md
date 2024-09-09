@@ -35,7 +35,7 @@ and array of r but where there is no need for ratingType or rateeType (or contex
 - importance: (optional because usually importance = influence, although there may be instances where this is not the case)
 - ratingType: (optional)
 
-We should envision that at some point, there will be a THRIVING MARKET for individual GrapeRankScorecards.
+We should envision that at some point, there will be a THRIVING MARKET for individual GrapeRankScorecards. It will be an easy matter to input a scorecard S and convert it into a rating r. 
 
 ## variable: GrapeRankScorecards (G)
 

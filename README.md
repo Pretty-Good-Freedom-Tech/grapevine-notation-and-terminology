@@ -9,8 +9,6 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 - G: GrapeRankScorecards
 - P: GrapeRankParameters
 
-R and G may take the form of sql tables or objects
-
 ## variable: GrapeRankRatings (R)
 
 - rater: pubkey

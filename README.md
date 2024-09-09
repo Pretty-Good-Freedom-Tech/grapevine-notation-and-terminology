@@ -87,15 +87,17 @@ This is one of the cornerstone functions of the grapevine
 - inputs: G_in, R, P
 - output: G_out
 
-Step 1: Iterate through every rating in R and establish an array aRatees of all ratees ~~(and all contexts if the optional context col is provided)~~
+Step 1: Iterate through every rating in R and establish two arrays: 
+- aRatees, an array of all ratees 
+- oRaters, a lookup table of all raters and their influence scores which will be used in subsequent steps
 
 ~~Step 2: initialize G_out with one row for each item in aRatees.~~
 - For all users except the seed user, set influence = average = confidence = input = 0
 - For the seed user, these variables will be something else. The parameters will define what exactly to do in this case; not sure how exactly that will be encoded in P. For the baseline Grapevine WoT Score as implemented in brainstorm, for seed user we have: influence = average = confidence = 1, and input = infinity (in theory) or 9999 (in practice) or n/a.
 
 Step 2: Iterate through each ratee in aRatees
-- calculate: average, input, confidence, influence
-- add a row to G_out with these results
+- call calculateScorecard which returns: oScorecard = { average, input, confidence, influence }
+- add a row to G_out with these results; G_out[ratee] = oScorecard
 
 Maybe wrap Step 2 in a function: calculateScorecard
 
@@ -103,8 +105,27 @@ Step 3: return G_out
 
 ## function: calculateScorecard
 
-- inputs:
+- inputs: ratee, oRaters, R
 - outputs: oScorecard.influence, oScorecard.average, oScorecard.confidence, oScorecard.input
+
+step 1: initialize totalProduct = totalInput = 0
+- call processRating to process the default rating 
+- Iterate through each rating r in R; if r.ratee == ratee, then call processRating to process r
+
+step 2:
+- average = totalProduct ? totalInput
+- input = totalInput
+- confidence = calculateConfidence(input, rigor)
+- influence = calculateInfluence(average, confidence)
+
+Step 3: return oScorecard = { influence, average, confidence, input }
+
+## function: processRating
+
+This function calculates the product and the input for a given rating; product and input are then used to increment totalProduct and totalInput
+
+- input: rating, 
+- output: { product, input }
 
 ## function: calculateWeight
 

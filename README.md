@@ -66,7 +66,9 @@ default ratee average and confidence define a single, additional rating that is 
 
 # Functions
 
-## function: TheReallyImportantGrapeRankFunction
+## function: theReallyImportantGrapeRankFunction
+
+not sure what to name this function; calculateGrapeRankScorecards? calculateScorecards? calculateG?
 
 This is one of the cornerstone functions of the grapevine
 
@@ -83,20 +85,26 @@ Step 2: Iterate through each ratee in aRatees
 - calculate: average, input, confidence, influence
 - add a row to G_out with these results
 
+Maybe wrap Step 2 in a function: calculateScorecard
+
 Step 3: return G_out
 
-## function: calculate weighted average
+## function: calculateScorecard
 
-## function: calculate weight
+
+
+## function: calculateWeightedAverage
+
+## function: calculateWeight
 
 This is the weight of an individual rating r. It is called once for each r by the *calculate weighted average* function. 
 
 - inputs: r, rater influence, attenuation factor, seed user
 - output: weight, a number between 0 and 1
 
-## function: calculate input
+## function: calculateInput
 
-## function: calculate confidence
+## function: calculateConfidence
 
 - inputs: rigor, input
 - output: confidence, a number between 0 and 1 (might be exceptions to this??)
@@ -107,12 +115,13 @@ alpha = (a function of rigor)
 
 confidence = (1 - e^(- alpha * input) )
 
-## function: calculate influence
+## function: calculateInfluence
 
 - inputs: average, confidence
 - output: influence
 
 influence = average * confidence
 
+This is simple enough equation that it maybe doesn't need it's own function; but might there be instances where we want to alter it somehow? Perhaps. In which case it will be useful for it to have a dedicated function.
 
 

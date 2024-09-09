@@ -75,11 +75,11 @@ This is one of the cornerstone functions of the grapevine
 
 Step 1: Iterate through every rating in R and establish an array aRatees of all ratees ~~(and all contexts if the optional context col is provided)~~
 
-Step 2: initialize G_out with one row for each item in aRatee
+Step 2: initialize G_out with one row for each item in aRatees. set influence = average = confidence = input = 0 unless ratee == seed user in which case influence = average = confidence = 1, and input = infinity (in theory) or 9999 (in practice) or n/a 
 
-Step 2: Iterate through each ratee in aRatees, calculate: average, input, confidence, influence, and update G_out accordingly
+Step 3: Iterate through each ratee in aRatees, calculate: average, input, confidence, influence, and update G_out accordingly
 
-Step 3: return G_out
+Step 4: return G_out
 
 ## function: calculate weighted average
 

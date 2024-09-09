@@ -3,9 +3,9 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 
 # Datasets
 
-## datasets: GrapeRankRatings, GrapeRankScorecard, GrapeRankScorecards, GrapeRankParameters
+## datasets: R: GrapeRankRatings, GrapeRankScorecard, G: GrapeRankScorecards, P: GrapeRankParameters
 
-These datasets may take the form of sql tables or objects
+R and G may take the form of sql tables or objects
 
 ## dataset: GrapeRankRatings (R)
 

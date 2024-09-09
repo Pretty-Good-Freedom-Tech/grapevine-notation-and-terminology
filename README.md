@@ -4,10 +4,10 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 # Variables
 
 ## variables: 
-- r: oGrapeRankRating
-- R: aGrapeRankRatings, an array of ratings 
-- S: oGrapeRankScorecard
-- G: aGrapeRankScorecards, an array of S
+- r: oGrapeRankRating, a.k.a "grapevine rating" or simply "rating"
+- R: aGrapeRankRatings, an array of ratings r
+- S: oGrapeRankScorecard, a.k.a "scorecard"
+- G: aGrapeRankScorecards, an array of scorecards S
 - P: oGrapeRankParameters
 
 ## variable: oGrapeRankRating (r)

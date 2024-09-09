@@ -4,7 +4,7 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 # Variables
 
 ## variables: 
-- r: oGrapeRankRating, a.k.a "grapevine rating" or simply "rating"
+- r: oGrapeRankRating, a.k.a "grapevine-formatted rating," "grapevine rating" or simply "rating"
 - R: aGrapeRankRatings, an array of ratings r
 - S: oGrapeRankScorecard, a.k.a "scorecard"
 - G: aGrapeRankScorecards, an array of scorecards S

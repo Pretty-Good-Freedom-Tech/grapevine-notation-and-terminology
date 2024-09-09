@@ -30,9 +30,11 @@ Context, ratingType, and rateeType are optional and may be omitted IF every entr
 - importance: (optional because usually importance = influence, although there may be instances where this is not the case
 - ratingType: (optional)
 
+We should envision that at some point, there will be a THRIVING MARKET for individual GrapeRankScorecards.
+
 ## dataset: GrapeRankScorecards (G)
 
-a list of GrapeRankScorecards
+a table or array of scorecards but where there is no need for observer or ratingType columns because they should be assumed to be identical for every scorecard in the table
 
 ## dataset: GrapeRankParameters (P)
 

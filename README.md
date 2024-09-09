@@ -52,7 +52,7 @@ a table or array of S but where there is no need for observer or ratingType colu
 
 A list of parameters 
 
-- seed user
+- seed user. For now, there is only one seed user. In theory, there could be more than one. So this should be an array of strings.
 - rigor: a number
 - attenuation factor: a number between 0 and 1. This is a factor in the weight
 - default rater influence: should be zero but in theory doesn't have to be

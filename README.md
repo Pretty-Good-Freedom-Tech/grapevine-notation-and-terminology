@@ -135,13 +135,18 @@ Step 2: product = weight * score
 
 Step 3: return { product, input }
 
-
 ## function: calculateWeight
 
 This is the weight of an individual rating r. It is called once for each r by the *calculate weighted average* function. The attenuationFactor is only included in the weight if the rater != seed user.
 
-- inputs: r, rater influence, attenuation factor, seed user
+- inputs: r, raterInfluence, attenuationFactor, seedUser
 - output: weight, a number between 0 and 1
+
+if seed user != rater:
+- weight = attenuationFactor * raterInfluence * r.confidence
+
+if seed user == rater:
+- weight = r.confidence (because raterInfluence = 1 by definition, and also attenuationFactor = 1 by definition for the seed user)
 
 ## function: calculateConfidence
 
@@ -159,7 +164,7 @@ confidence = (1 - e^(- alpha * input) )
 - inputs: average, confidence
 - output: influence
 
-influence = average * confidence
+return influence = average * confidence
 
 This is simple enough equation that it maybe doesn't need it's own function; but might there be instances where we want to alter it somehow? Perhaps. In which case it will be useful for it to have a dedicated function.
 

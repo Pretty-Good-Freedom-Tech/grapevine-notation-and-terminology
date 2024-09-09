@@ -4,22 +4,25 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 # Variables
 
 ## variables: 
-- R: GrapeRankRatings
+- r: GrapeRankRating
+- R: GrapeRankRatings, an array of ratings 
 - S: GrapeRankScorecard
 - G: GrapeRankScorecards, an array of S
 - P: GrapeRankParameters
 
-## variable: GrapeRankRatings (R)
+## variable: GrapeRankRating (r)
 
 - rater: pubkey
 - ratee: may be a pubkey or some other string that serves as a unique identifier, e.g. an event id, naddr, human-readable string like a movie name
-- score: usually a number between min and max, which are specified by ratingType
+- score: a number between min and max, which are specified by ratingType
 - confidence: a number between 0 and 1
-- context: string (optional)
-- ratingType (optional)
-- rateeType (optional)
+- context: string (optional if element in R and context is held constant in R). String may be human readable, nostr event id or naddr, etc.
+- ratingType (optional if an element in R and ratingType is held constant in R). Examples: ratingType = 5-star; ratingType = boolean0-1
+- rateeType (optional if an element in R and rateeType is held constant in R). Examples: rateeType = nostr pubkey; rateeType = movie title. 
 
-Context, ratingType, and rateeType are optional and may be omitted IF every entry in the dataset would have the same value
+## variable: GrapeRankRatings (R) 
+
+and array of r but where there is no need for ratingType or rateeType (or context?) because they are constant throughout R. 
 
 ## variable: GrapeRankScorecard (S)
 
@@ -29,14 +32,14 @@ Context, ratingType, and rateeType are optional and may be omitted IF every entr
 - average: a number between min and max (depending on ratingType)
 - confidence: a number between 0 and 1
 - input: a nonnegative number; an element in [0, inf)
-- importance: (optional because usually importance = influence, although there may be instances where this is not the case
+- importance: (optional because usually importance = influence, although there may be instances where this is not the case)
 - ratingType: (optional)
 
 We should envision that at some point, there will be a THRIVING MARKET for individual GrapeRankScorecards.
 
 ## variable: GrapeRankScorecards (G)
 
-a table or array of scorecards but where there is no need for observer or ratingType columns because they should be assumed to be identical for every scorecard in the table
+a table or array of S but where there is no need for observer or ratingType columns because they should be assumed to be identical for every scorecard in the table
 
 ## variable: GrapeRankParameters (P)
 

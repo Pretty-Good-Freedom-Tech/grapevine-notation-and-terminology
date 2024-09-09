@@ -91,18 +91,15 @@ Step 3: return G_out
 
 ## function: calculateScorecard
 
-
-
-## function: calculateWeightedAverage
+- inputs:
+- outputs: oScorecard.influence, oScorecard.average, oScorecard.confidence, oScorecard.input
 
 ## function: calculateWeight
 
-This is the weight of an individual rating r. It is called once for each r by the *calculate weighted average* function. 
+This is the weight of an individual rating r. It is called once for each r by the *calculate weighted average* function. The attenuationFactor is only included in the weight if the rater != seed user.
 
 - inputs: r, rater influence, attenuation factor, seed user
 - output: weight, a number between 0 and 1
-
-## function: calculateInput
 
 ## function: calculateConfidence
 

@@ -1,6 +1,14 @@
 # grapevine-notation-and-terminology
 suggested notation and terminology for the grapevine. Precursor to formalization with typscript.
 
+## main goal
+
+Primary objective is to build the function: **theReallyImportantGrapeRankFunction** 
+- inputs: R, G_in, P
+- output: G_out
+
+And of course we need a better name for it! It is depicted graphically as two nodes, G_in and G_out, connected by an arrow: R. 
+
 # Variables
 
 ## major variables: 

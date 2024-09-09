@@ -42,7 +42,7 @@ We should envision that at some point, there will be a THRIVING MARKET for indiv
 - r.confidence = S.confidence
 - r.context = S.context
 
-Note: the end user may want in some cases to alter the above identities. In particular, the context. This is one reason we call it *interpretation*!
+Note: the end user may want in some cases to alter the above identities. In particular, the context. This is one reason we call it *interpretation*! Another example: suppose the scorecard uses movie title, _The Godfather_, but the end user prefers to use the imdb database ID to represent ratee. In that case, the interpretation of S will involve converting S.observee (movie title) into the imdb ID.
 
 ## variable: GrapeRankScorecards (G)
 

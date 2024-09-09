@@ -49,6 +49,9 @@ A list of parameters
 - attenuation factor: a number between 0 and 1
 - default average: should be zero but in theory doesn't have to be
 - default confidence
+- ratingType
+- min
+- max
 
 (more?)
 

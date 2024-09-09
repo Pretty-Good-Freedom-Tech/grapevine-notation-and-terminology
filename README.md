@@ -4,13 +4,13 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 # Variables
 
 ## variables: 
-- r: GrapeRankRating
-- R: GrapeRankRatings, an array of ratings 
-- S: GrapeRankScorecard
-- G: GrapeRankScorecards, an array of S
-- P: GrapeRankParameters
+- r: oGrapeRankRating
+- R: aGrapeRankRatings, an array of ratings 
+- S: oGrapeRankScorecard
+- G: aGrapeRankScorecards, an array of S
+- P: oGrapeRankParameters
 
-## variable: GrapeRankRating (r)
+## variable: oGrapeRankRating (r)
 
 - rater: pubkey
 - ratee: may be a pubkey or some other string that serves as a unique identifier, e.g. an event id, naddr, human-readable string like a movie name
@@ -20,11 +20,11 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 - ratingType (optional if an element in R and ratingType is held constant in R). Examples: ratingType = 5-star; ratingType = boolean0-1
 - rateeType (optional if an element in R and rateeType is held constant in R). Examples: rateeType = nostr pubkey; rateeType = movie title. 
 
-## variable: GrapeRankRatings (R) 
+## variable: aGrapeRankRatings (R) 
 
 and array of r but where there is no need for ratingType or rateeType (or context?) because they are constant throughout R. 
 
-## variable: GrapeRankScorecard (S)
+## variable: oGrapeRankScorecard (S)
 
 - observer: pubkey
 - observee: same type as ratee (above)
@@ -44,11 +44,11 @@ We should envision that at some point, there will be a THRIVING MARKET for indiv
 
 Note: the end user may want in some cases to alter the above identities. In particular, the context. This is one reason we call it *interpretation*! Another example: suppose the scorecard uses movie title, _The Godfather_, but the end user prefers to use the imdb database ID to represent ratee. In that case, the interpretation of S will involve converting S.observee (movie title) into the imdb ID.
 
-## variable: GrapeRankScorecards (G)
+## variable: aGrapeRankScorecards (G)
 
 a table or array of S but where there is no need for observer or ratingType columns because they should be assumed to be identical for every scorecard in the table
 
-## variable: GrapeRankParameters (P)
+## variable: oGrapeRankParameters (P)
 
 A list of parameters 
 

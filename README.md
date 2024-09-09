@@ -124,8 +124,17 @@ Step 3: return oScorecard = { influence, average, confidence, input }
 
 This function calculates the product and the input for a given rating; product and input are then used to increment totalProduct and totalInput
 
-- input: rating, 
+- input: rating, ...
 - output: { product, input }
+
+Step 1: 
+- weight = calculateWeight( attenuationFactor, raterInfluence, ratingConfidence, rater, seedUser )
+- input = weight
+
+Step 2: product = weight * score
+
+Step 3: return { product, input }
+
 
 ## function: calculateWeight
 

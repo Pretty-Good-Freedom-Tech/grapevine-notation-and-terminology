@@ -75,11 +75,15 @@ This is one of the cornerstone functions of the grapevine
 
 Step 1: Iterate through every rating in R and establish an array aRatees of all ratees ~~(and all contexts if the optional context col is provided)~~
 
-Step 2: initialize G_out with one row for each item in aRatees. set influence = average = confidence = input = 0 unless ratee == seed user in which case influence = average = confidence = 1, and input = infinity (in theory) or 9999 (in practice) or n/a 
+~~Step 2: initialize G_out with one row for each item in aRatees.~~
+- For all users except the seed user, set influence = average = confidence = input = 0
+- For the seed user, these variables will be something else. The parameters will define what exactly to do in this case; not sure how exactly that will be encoded in P. For the baseline Grapevine WoT Score as implemented in brainstorm, for seed user we have: influence = average = confidence = 1, and input = infinity (in theory) or 9999 (in practice) or n/a.
 
-Step 3: Iterate through each ratee in aRatees, calculate: average, input, confidence, influence, and update G_out accordingly
+Step 2: Iterate through each ratee in aRatees
+- calculate: average, input, confidence, influence
+- add a row to G_out with these results
 
-Step 4: return G_out
+Step 3: return G_out
 
 ## function: calculate weighted average
 

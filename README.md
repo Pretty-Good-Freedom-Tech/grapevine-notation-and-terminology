@@ -1,13 +1,17 @@
 # grapevine-notation-and-terminology
 suggested notation and terminology for the grapevine. Precursor to formalization with typscript.
 
-# Datasets
+# Variables
 
-## datasets: R: GrapeRankRatings, GrapeRankScorecard, G: GrapeRankScorecards, P: GrapeRankParameters
+## variables: 
+- R: GrapeRankRatings
+- S: GrapeRankScorecard
+- G: GrapeRankScorecards
+- P: GrapeRankParameters
 
 R and G may take the form of sql tables or objects
 
-## dataset: GrapeRankRatings (R)
+## variable: GrapeRankRatings (R)
 
 - rater: pubkey
 - ratee: may be a pubkey or some other string that serves as a unique identifier, e.g. an event id, naddr, human-readable string like a movie name
@@ -19,7 +23,7 @@ R and G may take the form of sql tables or objects
 
 Context, ratingType, and rateeType are optional and may be omitted IF every entry in the dataset would have the same value
 
-## dataset: GrapeRankScorecard
+## variable: GrapeRankScorecard (S)
 
 - observer: pubkey
 - observee: same type as ratee (above)
@@ -32,11 +36,11 @@ Context, ratingType, and rateeType are optional and may be omitted IF every entr
 
 We should envision that at some point, there will be a THRIVING MARKET for individual GrapeRankScorecards.
 
-## dataset: GrapeRankScorecards (G)
+## variable: GrapeRankScorecards (G)
 
 a table or array of scorecards but where there is no need for observer or ratingType columns because they should be assumed to be identical for every scorecard in the table
 
-## dataset: GrapeRankParameters (P)
+## variable: GrapeRankParameters (P)
 
 A list of parameters 
 

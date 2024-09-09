@@ -3,22 +3,32 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 
 # Variables
 
-## variables: 
+## major variables: 
 - r: oGrapeRankRating, a.k.a "grapevine-formatted rating," "grapevine rating" or simply "rating"
 - R: aGrapeRankRatings, an array of ratings r
 - S: oGrapeRankScorecard, a.k.a "scorecard"
 - G: aGrapeRankScorecards, an array of scorecards S
 - P: oGrapeRankParameters
 
+## minor variables:
+- context: string, which may be human readable e.g. "product quality", nostr event id or naddr, etc.
+- ratingType: string. Examples: ratingType = 5-star; ratingType = boolean0-1
+- rateeType: string. Examples: rateeType = nostr pubkey; rateeType = movie title.
+- raterType: string. (In nostr, maybe raterType = pubkey always?)
+- rating (aka score): number
+- confidence: number in [0, 1]
+- input: a number in [0, inf)
+- average: number
+  
 ## variable: oGrapeRankRating (r)
 
 - rater: pubkey
 - ratee: may be a pubkey or some other string that serves as a unique identifier, e.g. an event id, naddr, human-readable string like a movie name
-- score: a number between min and max, which are specified by ratingType
+- rating, a.k.a. score: a number between min and max, which are specified by ratingType
 - confidence: a number between 0 and 1
-- context: string (optional if element in R and context is held constant in R). String may be human readable, nostr event id or naddr, etc.
-- ratingType (optional if an element in R and ratingType is held constant in R). Examples: ratingType = 5-star; ratingType = boolean0-1
-- rateeType (optional if an element in R and rateeType is held constant in R). Examples: rateeType = nostr pubkey; rateeType = movie title. 
+- context (optional if element in R and context is held constant in R). 
+- ratingType (optional if an element in R and ratingType is held constant in R)
+- rateeType (optional if an element in R and rateeType is held constant in R)
 
 ## variable: aGrapeRankRatings (R) 
 
@@ -32,13 +42,15 @@ and array of r but where there is no need for ratingType or rateeType (or contex
 - average: a number between min and max (depending on ratingType)
 - confidence: a number between 0 and 1
 - input: a nonnegative number; an element in [0, inf)
-- importance: (optional because usually importance = influence, although there may be instances where this is not the case)
-- ratingType: (optional)
+- ~~importance: (optional because usually importance = influence, although there may be instances where this is not the case)~~
+- context: string
+- ratingType: string (optional)
+- rateeType: string (optional)
 
 We should envision that at some point, there will be a THRIVING MARKET for individual scorecards S. It will be an easy matter to "interpret" a scorecard S by converting it into a rating r. 
 - r.rater = S.observer
 - r.ratee = S.observee
-- r.score = S.influence
+- r.score = S.average (or S.influence ??)
 - r.confidence = S.confidence
 - r.context = S.context
 

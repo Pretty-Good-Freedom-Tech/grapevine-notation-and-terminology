@@ -35,7 +35,14 @@ and array of r but where there is no need for ratingType or rateeType (or contex
 - importance: (optional because usually importance = influence, although there may be instances where this is not the case)
 - ratingType: (optional)
 
-We should envision that at some point, there will be a THRIVING MARKET for individual GrapeRankScorecards. It will be an easy matter to input a scorecard S and convert it into a rating r. 
+We should envision that at some point, there will be a THRIVING MARKET for individual scorecards S. It will be an easy matter to "interpret" a scorecard S by converting it into a rating r. 
+- r.rater = S.observer
+- r.ratee = S.observee
+- r.score = S.influence
+- r.confidence = S.confidence
+- r.context = S.context
+
+Note: the end user may want in some cases to alter the above identities. In particular, the context. This is one reason we call it *interpretation*!
 
 ## variable: GrapeRankScorecards (G)
 

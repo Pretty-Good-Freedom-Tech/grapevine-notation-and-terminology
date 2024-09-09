@@ -3,7 +3,7 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 
 # Datasets
 
-## datasets: GrapeRankRatings, GrapeRankRatings, GrapeRankScorecards
+## datasets: GrapeRankRatings, GrapeRankScorecard, GrapeRankScorecards, GrapeRankParameters
 
 These datasets may take the form of sql tables or objects
 
@@ -34,7 +34,7 @@ Context, ratingType, and rateeType are optional and may be omitted IF every entr
 
 a list of GrapeRankScorecards
 
-## dataset: parameters (P)
+## dataset: GrapeRankParameters (P)
 
 A list of parameters 
 

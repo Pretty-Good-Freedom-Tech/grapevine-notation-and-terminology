@@ -3,9 +3,11 @@ suggested notation and terminology for the grapevine. Precursor to formalization
 
 ## main goal
 
-Primary objective is to build the function: **theReallyImportantGrapeRankFunction** 
-- inputs: R, G_in, P
+Primary objective is to build the function: **calculateGrapeRankScorecards** 
+- inputs: G_in, R, P
 - output: G_out
+
+G_out = calculateGrapeRankScorecards(G_in, R, P)
 
 And of course we need a better name for it! It is depicted graphically as two nodes, G_in and G_out, connected by an arrow: R. 
 
@@ -78,17 +80,13 @@ A list of parameters
 - default rater influence: should be zero but in theory doesn't have to be
 - default ratee average: should be zero but in theory doesn't have to be
 - default ratee confidence: a number between 0 and 1
-- ratingType
-- min
-- max
+- ratingType / scoreType: includes whether the rating (or average) is integer or decimal, min score, max score. A question to consider is whether it makes sense for the rating to be one var type (e.g. integer) while allowing the average to be another (e.g. decimal). I'm thinking they need to be the same.
 
 default ratee average and confidence define a single, additional rating that is automatically applied to every ratee, where the author is the seed user. Setting default ratee confidence = 0 is the same effect as completely omitting this rating. 
 
 # Functions
 
-## function: theReallyImportantGrapeRankFunction
-
-not sure what to name this function; calculateGrapeRankScorecards? calculateScorecards? calculateG?
+## function: calculateGrapeRankScorecards
 
 This is one of the cornerstone functions of the grapevine
 

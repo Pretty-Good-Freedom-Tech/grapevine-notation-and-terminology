@@ -123,7 +123,7 @@ step 1: initialize totalProduct = totalInput = 0
 - Iterate through each rating r in R; if r.ratee == ratee, then call processRating to process r
 
 step 2:
-- average = totalProduct ? totalInput
+- average = totalProduct / totalInput
 - input = totalInput
 - confidence = calculateConfidence(input, rigor)
 - influence = calculateInfluence(average, confidence)

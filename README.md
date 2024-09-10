@@ -97,7 +97,7 @@ This is one of the cornerstone functions of the grapevine
 - inputs: G_in, R, P
 - output: G_out
 
-Step 1: Iterate through every rating in R and establish two arrays: 
+Step 1: Iterate through every rating in R and establish two variables: 
 - aRatees, an array of all ratees 
 - oRaters, a lookup table of all raters and their influence scores which will be used in subsequent steps
 

@@ -95,10 +95,18 @@ default ratee average and confidence define a single, additional rating that is 
 input: seedUserPubkey
 output: R_init, G_init
 
-Step 1: fetch follows and mutes of seed user
-- 
+Step 1: add seed user pubkey to G_init, with influence = confidence = average = 1, input = inifnity or 9999 or n/a
 
-Step 2: fetch follows and mutes of 
+Step 1: fetch follows and mutes of seed user
+
+- add each follow and each mute to R_init
+- add each followed pubkey to G_init, with influence = input = confidence = average = 0
+
+Step 2: fetch follows and mutes of each pubkuy in G_init
+
+Step 3: repeat step 2 until no more pubkeys get added, or a predetermined number N times
+
+return G_init, R_init 
 
 ## function: calculateGrapeRankScorecards
 

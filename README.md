@@ -106,7 +106,7 @@ Step 2: fetch follows and mutes of seed user
 
 Step 3: fetch follows and mutes of each pk in G_init, but replace rater: seedUser with rater: pk
 
-Step 4: repeat step 2 until no more pubkeys get added, or a predetermined number N times
+Step 4: repeat step 3 until no more pubkeys get added, or a predetermined number N times
 
 return G_init, R_0
 

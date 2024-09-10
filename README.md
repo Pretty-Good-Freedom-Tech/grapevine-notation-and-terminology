@@ -90,6 +90,16 @@ default ratee average and confidence define a single, additional rating that is 
 
 # Functions
 
+## function: initializeFollowsAndMutes
+
+input: seedUserPubkey
+output: R_init, G_init
+
+Step 1: fetch follows and mutes of seed user
+- 
+
+Step 2: fetch follows and mutes of 
+
 ## function: calculateGrapeRankScorecards
 
 This is one of the cornerstone functions of the grapevine

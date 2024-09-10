@@ -100,7 +100,8 @@ Step 1: add seed user pubkey to G_init, with influence = confidence = average = 
 
 Step 2: fetch follows and mutes of seed user
 
-- add each follow and each mute to R_0, where score = 1 (follow), score = 0 (mute)
+- add each follow to R_0, where score = 1 (follow), confindence = 0.05
+- add each mute to R_0, where score = 0 (mute), confidence = 0.1
 - add each followed pubkey to G_init, with influence = input = confidence = average = 0
 
 Step 3: fetch follows and mutes of each pubkuy in G_init

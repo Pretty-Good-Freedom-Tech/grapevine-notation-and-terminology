@@ -100,8 +100,8 @@ Step 1: add seed user pubkey to G_init, with influence = confidence = average = 
 
 Step 2: fetch follows and mutes of seed user
 
-- for each follow, add r to R_0, where r = { rater: seedUser, ratee: followedUser, score = 1, confidence = 0.05 }
-- for each mute, add r to R_0, where r = { rater: seedUser, ratee: mutedUser, score = 0, confidence = 0.1 }
+- for each follow, add r to R_0, where r = { rater: seedUser, ratee: followedUser, score = 1, confidence = 0.05, context: botOrNot }
+- for each mute, add r to R_0, where r = { rater: seedUser, ratee: mutedUser, score = 0, confidence = 0.1, context: botOrNot }
 - add each followed pubkey to G_init, with influence = input = confidence = average = 0
 
 Step 3: fetch follows and mutes of each pk in G_init, but replace rater: seedUser with rater: pk

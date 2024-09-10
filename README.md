@@ -13,15 +13,15 @@ The following [figure](https://i.nostr.build/Q3pw3GFEfO1rb4k1.png) illustrates h
 
 ![](https://i.nostr.build/Q3pw3GFEfO1rb4k1.png)
 
-Note that the interpretation step is completely external to the calculateGrapeRankScorecards function.
+Note that the interpretation step, which produces the array R of ratings r, is completely external to the calculateGrapeRankScorecards function.
 
 # Variables
 
 ## major variables: 
 - r: oGrapeRankRating, a.k.a "grapevine-formatted rating," "grapevine rating" or simply "rating"
-- R: aGrapeRankRatings, an array of ratings r
+- R: aGrapeRankRatings, an array R of ratings r
 - S: oGrapeRankScorecard, a.k.a "scorecard"
-- G: aGrapeRankScorecards, an array of scorecards S
+- G: aGrapeRankScorecards, an array G of scorecards S
 - P: oGrapeRankParameters
 
 ## minor variables:

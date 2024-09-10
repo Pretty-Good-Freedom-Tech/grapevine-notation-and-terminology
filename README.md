@@ -9,7 +9,11 @@ Primary objective is to build the function: **calculateGrapeRankScorecards**
 
 G_out = calculateGrapeRankScorecards(G_in, R, P)
 
-And of course we need a better name for it! It is depicted graphically as two nodes, G_in and G_out, connected by an arrow: R. 
+The following [figure](https://i.nostr.build/Q3pw3GFEfO1rb4k1.png) illustrates how this function is represented on a Worldview:
+
+![](https://i.nostr.build/Q3pw3GFEfO1rb4k1.png)
+
+Note that the interpretation step is completely external to the calculateGrapeRankScorecards function.
 
 # Variables
 

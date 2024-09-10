@@ -104,7 +104,7 @@ Step 2: fetch follows and mutes of seed user
 - for each mute, add r to R_0, where r = { rater: seedUser, ratee: mutedUser, score = 0, confidence = 0.1 }
 - add each followed pubkey to G_init, with influence = input = confidence = average = 0
 
-Step 3: fetch follows and mutes of each pubkuy in G_init
+Step 3: fetch follows and mutes of each pk in G_init, but replace rater: seedUser with rater: pk
 
 Step 4: repeat step 2 until no more pubkeys get added, or a predetermined number N times
 
